@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maritime Port - Interactive Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Wave animation */
+    .wave {
+      position: relative;
+      width: 100%;
+      height: 150px;
+      background: url('https://www.transparenttextures.com/patterns/wave.png') repeat-x;
+      animation: wave-animation 6s linear infinite;
+    }
+
+    @keyframes wave-animation {
+      from {
+        background-position-x: 0;
+      }
+      to {
+        background-position-x: 1000px;
+      }
+    }
+
+    /* Crane animation */
+    .crane {
+      animation: crane-move 4s ease-in-out infinite;
+    }
+
+    @keyframes crane-move {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-dark-blue text-white">
+
+  <!-- Header -->
+  <header class="bg-bright-blue py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-2xl font-bold">Maritime Port</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#services" class="hover:underline">Services</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative text-center py-16 bg-blue-800 text-white">
+    <h2 class="text-4xl font-bold">Welcome to the Maritime Port</h2>
+    <p class="mt-4 text-lg">Experience the efficiency and innovation of port logistics.</p>
+    <div class="wave"></div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="py-16 bg-dark-blue">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">About Us</h2>
+      <p class="text-lg">Our port provides world-class services with cutting-edge technology and infrastructure.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-bright-blue text-dark-blue">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="p-4 bg-white rounded shadow">
+          <h3 class="font-bold">Container Management</h3>
+          <p>Advanced container handling services using automated systems.</p>
+          <div class="crane bg-blue-400 h-10 w-40 mx-auto mt-4"></div>
+        </div>
+        <div class="p-4 bg-white rounded shadow">
+          <h3 class="font-bold">Ship Docking</h3>
+          <p>Efficient docking facilities for ships of all sizes.</p>
+          <div class="wave"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-dark-blue">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <p>Phone: +123 456 789 | Email: info@maritimeport.com</p>
+      <form class="mt-6 max-w-lg mx-auto">
+        <input type="text" placeholder="Your Name" class="block w-full mb-4 p-2 rounded">
+        <input type="email" placeholder="Your Email" class="block w-full mb-4 p-2 rounded">
+        <textarea placeholder="Your Message" class="block w-full mb-4 p-2 rounded"></textarea>
+        <button type="submit" class="bg-bright-blue text-white py-2 px-4 rounded">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 bg-bright-blue text-center">
+    <p>&copy; 2024 Maritime Port. All rights reserved.</p>
+  </footer>
+</body>
+</html>
